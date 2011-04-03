@@ -1,4 +1,12 @@
 Brewski::Application.routes.draw do
+  get "beer/index"
+
+  get "beer/show"
+
+  get "beer/create"
+
+  get "beer/edit"
+
   resources :authentications
 
   resources :users

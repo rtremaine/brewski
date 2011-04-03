@@ -65,6 +65,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.9, /home/mike/.rvm/gems/ruby-1.9.2-p180@mikegemset1/gems/treetop-1.4.9)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.9, /home/mike/.rvm/gems/ruby-1.9.2-p180@mikegemset1/gems/arel-2.0.9)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.15, /home/mike/.rvm/gems/ruby-1.9.2-p180@mikegemset1/gems/mail-2.2.15)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.5, /Users/rtremaine/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5)" level="application" />
   </component>
 </module>
 

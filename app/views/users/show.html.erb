@@ -1,20 +1,15 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Provider:</b>
-  <%= @user.provider %>
-</p>
-
-<p>
-  <b>Uid:</b>
-  <%= @user.uid %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<h1><%= @user.name %></h1>
+<h2>My Brewskis</h2>
+<% @user.reviews.each do |review| %>
+    <div class="user-review-row">
+      <div class="overall-rating">
+        Overall Rating:
+        <%= review.overall_rating %>
+      </div>
+      <div class="comment">
+        Comment:
+        <%= review.comment %>
+      </div>
+    </div>
+<% end %>

@@ -1,4 +1,8 @@
 Brewski::Application.routes.draw do
+  resources :authentications
+
+  resources :users
+
   get "home/index"
 
   # The priority is based upon order of creation:

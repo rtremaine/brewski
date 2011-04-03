@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @user.name %></h1>
 <h2>My Brewskis</h2>
-<% @users.
-
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.provider %></td>
-    <td><%= user.uid %></td>
-    <td><%= user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% @user.reviews.each do |review| %>
+    <div class="user-review-row">
+      <div class="overall-rating">
+        Overall Rating:
+        <%= review.overall_rating %>
+      </div>
+      <div class="comment">
+        Comment:
+        <%= review.comment %>
+      </div>
+    </div>
 <% end %>

@@ -14,8 +14,8 @@ beers = IO.readlines("db/migrate/data/beers_ins.sql")
 geocodes = IO.readlines("db/migrate/data/geocodes_ins.sql")
 
 
-ActiveRecord::Base.connection.execute(categories.join)
-ActiveRecord::Base.connection.execute(breweries.join)
-ActiveRecord::Base.connection.execute(styles.join)
+#ActiveRecord::Base.connection.execute(categories.join)
+#ActiveRecord::Base.connection.execute(breweries.join)
+#ActiveRecord::Base.connection.execute(styles.join)
 ActiveRecord::Base.connection.execute(beers.join)
-ActiveRecord::Base.connection.execute(geocodes.join)
+#ActiveRecord::Base.connection.execute(geocodes.join)

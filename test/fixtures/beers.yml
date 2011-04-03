@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  brewery_id: 1
+  name: MyString
+  category_id: 1
+  style_id: 1
+  abv: 1.5
+  ibu: 1.5
+  srm: 1.5
+  upc: 1.5
+  filepath: MyString
+  description: 
+
+two:
+  brewery_id: 1
+  name: MyString
+  category_id: 1
+  style_id: 1
+  abv: 1.5
+  ibu: 1.5
+  srm: 1.5
+  upc: 1.5
+  filepath: MyString
+  description: 

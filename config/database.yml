@@ -12,8 +12,7 @@ development:
   database: brewski_development
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: bondaxe
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,8 +24,7 @@ test:
   database: brewski_test
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: bondaxe
 
 production:
   adapter: mysql2
@@ -35,5 +33,4 @@ production:
   database: brewski_production
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: bondaxe

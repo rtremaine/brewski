@@ -10,6 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20110403212333) do
 
   create_table "beers", :force => true do |t|
@@ -52,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20110403212333) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "accuracy"
+=======
+ActiveRecord::Schema.define(:version => 20110403203245) do
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "overall_rating"
+    t.string   "comment"
+>>>>>>> d903be038d6d48e791145471718aed66e20690ca
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,20 +1,33 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Provider:</b>
-  <%= @user.provider %>
-</p>
+<div id="right-panel">
 
-<p>
-  <b>Uid:</b>
-  <%= @user.uid %>
-</p>
+  <div class="favorite-beers">
+    <h2>Favorite Beers</h2>
+  </div>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+  <div class="favorite-breweries">
+    <h2>Favorite Breweries</h2>
+  </div>
+</div>
+<h1><%= @user.name %></h1>
+<div class="recent-reviews">
 
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <h2>Recent Reviews</h2>
+  <%= link_to 'New Review', new_review_path %>
+  <% @user.reviews.each do |review| %>
+      <div class="user-review-row">
+        <%= link_to 'Show', review %>
+        <div class="created-on">
+          Created at: <%= review.created_at %>
+        </div>
+        <div class="overall-rating">
+          Overall Rating:
+          <%= review.overall_rating %>
+        </div>
+        <div class="comment">
+          Comment:
+          <%= review.comment %>
+        </div>
+      </div>
+  <% end %>
+</div>

@@ -1,22 +1,39 @@
 body {
     background-color: #E6BB70;
     color: #521300;
+    font-family: 'PT Sans', arial, serif;
+}
+#header, #body-wrapper  {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#body-wrapper {
+    margin-top: 80px;
+    clear: both;
 }
 #header {
-    padding: 10px 10px 10px 10px;
-    min-height: 40px;
-}
-#main {
-    padding: 0 10px 0 10px;
-}
-#header, #main {
-    background-color: #FFF1D7;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
 }
 #header-title {
     float: left;
 }
 #twitter-sign-in {
     float: right;
+}
+#main-left {
+    background-color: #FFFFFF;
+    width: 640px;
+    float: left;
+}
+#main-right {
+    background-color: #FFF1D7;
+    float: left;
+    min-height: 982px;
+    min-width: 300px;
+}
+#main-left, main-right {
+    padding: 0 10px 0 10px;
+}
+#footer {
+    clear: left;
 }

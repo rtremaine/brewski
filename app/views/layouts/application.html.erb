@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   <title>Brewski</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
+<div id="header">
+  <div id="header-title">
+    <h1 class="title">Brewski</h1>
+  </div>
+  <div id="twitter-sign-in">
+      <% if current_user %>
+          Welcome <%= current_user.name %>!
+          <%= link_to "Sign Out", signout_path %>
+      <% else %>
+          <a href="/auth/twitter" title="Sign in with Twitter">
+            <img src="/images/sign-in-with-twitter-l.png" alt=""/>
+          </a>
+      <% end %>
+  </div>
+</div>
 <div id="body-wrapper">
-    <div id="header">
-      <div id="header-title">
-        <h1 class="title">Brewski</h1>
-      </div>
-      <div id="twitter-sign-in">
-          <% if current_user %>
-              Welcome <%= current_user.name %>!
-              <%= link_to "Sign Out", signout_path %>
-          <% else %>
-              <a href="/auth/twitter" title="Sign in with Twitter">
-                <img src="/images/sign-in-with-twitter-l.png" alt=""/>
-              </a>
-          <% end %>
-      </div>
-    </div>
-    <div id="main">
+    <div id="main-left">
       <%= yield %>
     </div>
+    <div id="main-right">
+      <p>Some test data.</p>
+    </div>
 </div>
+<div id="footer"></div>
 </body>
 </html>

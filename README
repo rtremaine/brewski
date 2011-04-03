@@ -1,3 +1,10 @@
 
 use 'git push heorku master' to push to heroku
 use 'git push' to push to github
+
+todo's
+- Authentication [MC]
+- Beer MVC [RT]
+- Landing page [MM]
+
+

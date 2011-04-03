@@ -23,14 +23,12 @@ body {
 #main {
     background-color: #FFFFFF;
     width: 960px;
-    float: left;
+    overflow: hidden;
 }
 #right-panel {
     background-color: #FFF1D7;
-    float: left;
-}
-#main-left, main-right {
-    padding: 0 10px 0 10px;
+    float: right;
+    width: 300px;
 }
 #footer {
     clear: left;

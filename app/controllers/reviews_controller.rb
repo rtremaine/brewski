@@ -76,7 +76,7 @@ class ReviewsController < ApplicationController
     @review.destroy
 
     respond_to do |format|
-      format.html { redirect_to(reviews_url) }
+      format.html { redirect_to(current_user) }
       format.xml  { head :ok }
     end
   end

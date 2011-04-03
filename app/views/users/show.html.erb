@@ -1,18 +1,33 @@
+
+<div id="right-panel">
+
+  <div class="favorite-beers">
+    <h2>Favorite Beers</h2>
+  </div>
+
+  <div class="favorite-breweries">
+    <h2>Favorite Breweries</h2>
+  </div>
+</div>
 <h1><%= @user.name %></h1>
-<h2>Recent Brewskis</h2>
-<%= link_to 'New Review', new_review_path %>
-<% @user.reviews.each do |review| %>
-    <div class="user-review-row">
-    <div class="created-on">
-      Created at: <%= review.created_at %>
-    </div>
-      <div class="overall-rating">
-        Overall Rating:
-        <%= review.overall_rating %>
+<div class="recent-reviews">
+
+  <h2>Recent Reviews</h2>
+  <%= link_to 'New Review', new_review_path %>
+  <% @user.reviews.each do |review| %>
+      <div class="user-review-row">
+        <%= link_to 'Show', review %>
+        <div class="created-on">
+          Created at: <%= review.created_at %>
+        </div>
+        <div class="overall-rating">
+          Overall Rating:
+          <%= review.overall_rating %>
+        </div>
+        <div class="comment">
+          Comment:
+          <%= review.comment %>
+        </div>
       </div>
-      <div class="comment">
-        Comment:
-        <%= review.comment %>
-      </div>
-    </div>
-<% end %>
+  <% end %>
+</div>

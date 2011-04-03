@@ -1,0 +1,41 @@
+<h1>Listing breweries</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Country</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th>Filepath</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @breweries.each do |brewery| %>
+  <tr>
+    <td><%= brewery.name %></td>
+    <td><%= brewery.address1 %></td>
+    <td><%= brewery.address2 %></td>
+    <td><%= brewery.city %></td>
+    <td><%= brewery.state %></td>
+    <td><%= brewery.country %></td>
+    <td><%= brewery.phone %></td>
+    <td><%= brewery.website %></td>
+    <td><%= brewery.filepath %></td>
+    <td><%= brewery.description %></td>
+    <td><%= link_to 'Show', brewery %></td>
+    <td><%= link_to 'Edit', edit_brewery_path(brewery) %></td>
+    <td><%= link_to 'Destroy', brewery, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Brewery', new_brewery_path %>

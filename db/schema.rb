@@ -10,36 +10,70 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20110403192921) do
-=======
-ActiveRecord::Schema.define(:version => 20110403192519) do
->>>>>>> 07c5ad1a23a1a3edc0cb08135ebaa7a5cc84eed4
+ActiveRecord::Schema.define(:version => 20110403212333) do
+
+  create_table "beers", :force => true do |t|
+    t.integer  "brewery_id"
+    t.string   "name"
+    t.integer  "category_id"
+    t.integer  "style_id"
+    t.float    "abv"
+    t.float    "ibu"
+    t.float    "srm"
+    t.integer  "upc"
+    t.string   "filepath"
+    t.text     "description"
+    t.integer  "add_user"
+    t.datetime "last_mod"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "breweries", :force => true do |t|
+    t.string   "name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "code"
+    t.string   "country"
+    t.string   "phone"
+    t.string   "website"
+    t.string   "filepath"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "add_user"
+    t.datetime "last_mod"
+  end
+
+  create_table "brewery_geocodes", :force => true do |t|
+    t.integer  "brewery_id"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "accuracy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "last_mod"
+  end
+
+  create_table "styles", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "last_mod"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "provider"
     t.string   "uid"
-<<<<<<< HEAD
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "beers", :force => true do |t|
-    t.integer  "company_id"
-    t.string   "name",       :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "companies", :force => true do |t|
-    t.string   "name",       :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-=======
->>>>>>> 07c5ad1a23a1a3edc0cb08135ebaa7a5cc84eed4
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

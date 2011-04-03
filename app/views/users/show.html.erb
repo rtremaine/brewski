@@ -1,8 +1,11 @@
-<p id="notice"><%= notice %></p>
 <h1><%= @user.name %></h1>
-<h2>My Brewskis</h2>
+<h2>Recent Brewskis</h2>
+<%= link_to 'New Review', new_review_path %>
 <% @user.reviews.each do |review| %>
     <div class="user-review-row">
+    <div class="created-on">
+      Created at: <%= review.created_at %>
+    </div>
       <div class="overall-rating">
         Overall Rating:
         <%= review.overall_rating %>

@@ -1,16 +1,11 @@
 <h1>Review a Brewski</h1>
 
-<form accept-charset="UTF-8" action="/reviews" class="new_review" id="new_review" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zvCLg0gnu/tU4OP1PvgCaiVJK2oLDMuRJUTmwIPKwCk=" /></div>
-  <div class="field">
-    <label for="review_overall_rating">Overall rating</label><br />
-    <input id="review_overall_rating" name="review[overall_rating]" size="30" type="text" />
-  </div>
-  <div class="field">
+<%= form_for @review do |f| %>
+  <%= f.label :overall_rating %>:
+  <%= f.text_field :overall_rating %><br />
 
-    <label for="review_comment">Comment</label><br />
-    <input id="review_comment" name="review[comment]" size="30" type="text" />
-  </div>
-  <div class="actions">
-    <input id="review_submit" name="commit" type="submit" value="Create Review" />
-  </div>
-</form>
+  <%= f.label :comment %>:
+  <%= f.text_field :comment %><br />
+
+  <%= f.submit %>
+<% end %>

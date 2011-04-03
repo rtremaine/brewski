@@ -20,16 +20,14 @@ body {
 #twitter-sign-in {
     float: right;
 }
-#main-left {
+#main {
     background-color: #FFFFFF;
-    width: 640px;
+    width: 960px;
     float: left;
 }
-#main-right {
+#right-panel {
     background-color: #FFF1D7;
     float: left;
-    min-height: 982px;
-    min-width: 300px;
 }
 #main-left, main-right {
     padding: 0 10px 0 10px;

@@ -41,7 +41,7 @@ class ReviewsController < ApplicationController
   # POST /reviews.xml
   def create
     @review = Review.new(params[:review])
-
+    @review.user = current_user
     respond_to do |format|
       if @review.save
         format.html { redirect_to(@review, :notice => 'Review was successfully created.') }

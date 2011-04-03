@@ -10,11 +10,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20110403192921) do
+=======
 ActiveRecord::Schema.define(:version => 20110403192519) do
+>>>>>>> 07c5ad1a23a1a3edc0cb08135ebaa7a5cc84eed4
 
   create_table "users", :force => true do |t|
     t.string   "provider"
     t.string   "uid"
+<<<<<<< HEAD
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "beers", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+=======
+>>>>>>> 07c5ad1a23a1a3edc0cb08135ebaa7a5cc84eed4
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

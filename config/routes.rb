@@ -1,17 +1,12 @@
 Brewski::Application.routes.draw do
-  get "beer/index"
-
-  get "beer/show"
-
-  get "beer/create"
-
-  get "beer/edit"
-
-  resources :authentications
-
+  resources :beer
   resources :users
 
   get "home/index"
+
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Provider</th>
+    <th>Uid</th>
     <th>Name</th>
     <th></th>
     <th></th>
@@ -10,6 +12,8 @@
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.provider %></td>
+    <td><%= user.uid %></td>
     <td><%= user.name %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>

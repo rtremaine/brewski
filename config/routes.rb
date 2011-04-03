@@ -1,4 +1,5 @@
 Brewski::Application.routes.draw do
+  resources :beer
   resources :users
 
   get "home/index"

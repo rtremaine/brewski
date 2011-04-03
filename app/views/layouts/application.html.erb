@@ -17,7 +17,9 @@
           Welcome <%= current_user.name %>!
           <%= link_to "Sign Out", signout_path %>
       <% else %>
-          <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+          <a href="/auth/twitter" title="Sign in with Twitter">
+            <img src="/images/sign-in-with-twitter-l.png" alt=""/>
+          </a>
       <% end %>
     </div>
   </div>

@@ -1,4 +1,6 @@
 Brewski::Application.routes.draw do
+  resources :breweries
+
   resources :beers
 
   root :to => "home#index"

@@ -15,7 +15,7 @@
   </div>
   <div id="twitter-sign-in">
       <% if current_user %>
-          Welcome <%= current_user.name %>!
+          Welcome <%= link_to current_user.name, current_user %>!
           <%= link_to "Sign Out", signout_path %>
       <% else %>
           <a href="/auth/twitter" title="Sign in with Twitter">

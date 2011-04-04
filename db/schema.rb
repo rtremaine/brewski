@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403212333) do
+ActiveRecord::Schema.define(:version => 20110404021017) do
 
   create_table "beers", :force => true do |t|
     t.integer  "brewery_id"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20110403212333) do
     t.string   "filepath"
     t.text     "description"
     t.integer  "add_user"
-    t.datetime "last_mod"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,7 +43,6 @@ ActiveRecord::Schema.define(:version => 20110403212333) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "add_user"
-    t.datetime "last_mod"
   end
 
   create_table "brewery_geocodes", :force => true do |t|
@@ -60,7 +58,6 @@ ActiveRecord::Schema.define(:version => 20110403212333) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "last_mod"
   end
 
   create_table "reviews", :force => true do |t|
@@ -76,7 +73,6 @@ ActiveRecord::Schema.define(:version => 20110403212333) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "last_mod"
   end
 
   create_table "users", :force => true do |t|

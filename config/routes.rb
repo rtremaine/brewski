@@ -1,4 +1,8 @@
 Brewski::Application.routes.draw do
+  get "categories/show"
+
+  get "categories/index"
+
   resources :breweries
 
   resources :beers
@@ -8,6 +12,7 @@ Brewski::Application.routes.draw do
   resources :reviews
   resources :beer
   resources :users
+  resources :categories
 
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
